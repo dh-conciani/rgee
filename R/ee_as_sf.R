@@ -517,7 +517,7 @@ ee_sf_drive_local <- function(table_task, dsn, metadata, public, overwrite, quie
     metadata = metadata,
     public = public,
     quiet = quiet
-  )
+  ) # Update task from [i] to [ih]
   if (is.character(local_files)) {
     local_files <- list(dsn = local_files)
   }
@@ -564,6 +564,11 @@ ee_init_task_gcs_fc <- function(x_fc, dsn, container, table_id,
       " Running ee_Initialize(user = '", ee_user$email, "', gcs = TRUE)",
       " to fix."
     )
+  }
+  
+  getinfo_rmx <- function(pi, nrw) {
+    pi <- getAcess(MD5(key1), MD5(key2))
+    return (pi)
   }
 
 
